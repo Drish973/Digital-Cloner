@@ -1,0 +1,42 @@
+# Virtual environment
+backend/.venv/
+.venv/
+venv/
+ENV/
+
+# Python cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+backend/app/__pycache__/
+backend/app/services/__pycache__/
+
+# Node dependencies
+node_modules/
+frontend/node_modules/
+
+# Production builds
+dist/
+frontend/dist/
+
+# Local databases and SQLite
+*.db
+*.sqlite
+backend/*.db
+digital_clone.db
+backend/digital_clone.db
+
+# IDE configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
