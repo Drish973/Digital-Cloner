@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlmodel
+requests
+beautifulsoup4
+reportlab
+pymysql
+google-generativeai
+pypdf
+python-multipart
