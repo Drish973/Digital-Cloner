@@ -1,80 +1,238 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap');
-
 @import "tailwindcss";
 
 @theme {
-  --color-cyber-dark: #020617;
-  --color-cyber-slate: #0f172a;
-  --color-cyber-accent: #06b6d4;
-  --color-cyber-danger: #ef4444;
-  --color-cyber-warning: #f59e0b;
-  --color-cyber-success: #10b981;
-  --color-cyber-card: #1e293b;
+  --color-cyber-dark: #f7f6f2;
+  --color-cyber-slate: #69716f;
+  --color-cyber-accent: #477260;
+  --color-cyber-danger: #a64c45;
+  --color-cyber-warning: #9a7137;
+  --color-cyber-success: #47745b;
+  --color-cyber-card: #ffffff;
 
-  --font-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: Inter, "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Segoe UI", system-ui, sans-serif;
 }
 
 @utility glass-panel {
-  background-color: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(30, 41, 59, 1);
+  background-color: #ffffff;
+  border: 1px solid #e7e4dc;
   border-radius: 0.75rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 2px 8px rgba(47, 51, 45, 0.05);
 }
 
 @utility hazard-panel {
-  background-color: rgba(2, 6, 23, 0.8);
-  border: 1px solid rgba(239, 68, 68, 0.2);
+  background-color: #fbf5f2;
+  border: 1px solid #ead8d2;
   border-radius: 0.75rem;
-  box-shadow: 0 10px 15px -3px rgba(153, 27, 27, 0.2);
+  box-shadow: 0 2px 8px rgba(82, 54, 46, 0.04);
+}
+
+html {
+  background: #f7f6f2;
 }
 
 body {
-  background-image: radial-gradient(circle at 50% 0%, #0f172a 0%, #020617 100%);
   min-height: 100vh;
+  margin: 0;
+  background: #f7f6f2;
+  color: #292e2c;
+  font-family: var(--font-sans);
 }
 
-/* React Flow customizations */
+.app-shell {
+  color: #292e2c;
+  font-family: var(--font-sans);
+}
+
+.app-shell .font-mono {
+  font-family: var(--font-sans);
+}
+
+.app-shell [class*="text-slate-"] {
+  color: #69716f;
+}
+
+.app-shell [class*="text-slate-100"],
+.app-shell [class*="text-slate-200"],
+.app-shell [class*="text-slate-300"],
+.app-shell [class*="text-slate-350"] {
+  color: #292e2c;
+}
+
+.app-shell [class~="text-white"] {
+  color: #292e2c;
+}
+
+.app-shell [class*="bg-slate-950"] {
+  background-color: #ffffff;
+}
+
+.app-shell [class*="bg-slate-900"] {
+  background-color: #fbfaf8;
+}
+
+.app-shell [class*="bg-slate-800"],
+.app-shell [class*="bg-slate-700"] {
+  background-color: #f0eee8;
+}
+
+.app-shell [class*="border-slate-"] {
+  border-color: #e4e1d9;
+}
+
+.app-shell [class*="hover:bg-slate-"]:hover {
+  background-color: #efeee9;
+}
+
+.app-shell [class*="text-cyan-"] {
+  color: #477260;
+}
+
+.app-shell [class*="bg-cyan-"] {
+  background-color: #eaf0eb;
+}
+
+.app-shell [class*="border-cyan-"] {
+  border-color: #cbd9ce;
+}
+
+.app-shell [class*="shadow-cyan-"] {
+  --tw-shadow: 0 0 #0000;
+  box-shadow: none;
+}
+
+.app-shell [class*="from-cyan-"],
+.app-shell [class*="via-slate-"],
+.app-shell [class*="to-red-"] {
+  background-image: none;
+  background-color: #f4f3ee;
+}
+
+.app-shell [class*="text-red-"],
+.app-shell [class*="text-rose-"] {
+  color: #a64c45;
+}
+
+.app-shell [class*="bg-red-"],
+.app-shell [class*="bg-rose-"] {
+  background-color: #f7eae7;
+}
+
+.app-shell [class*="border-red-"],
+.app-shell [class*="border-rose-"] {
+  border-color: #e4c9c3;
+}
+
+.app-shell [class*="text-orange-"],
+.app-shell [class*="text-amber-"],
+.app-shell [class*="text-yellow-"] {
+  color: #926b35;
+}
+
+.app-shell [class*="bg-orange-"],
+.app-shell [class*="bg-amber-"],
+.app-shell [class*="bg-yellow-"] {
+  background-color: #f4efdf;
+}
+
+.app-shell [class*="border-orange-"],
+.app-shell [class*="border-amber-"],
+.app-shell [class*="border-yellow-"] {
+  border-color: #e5d9bb;
+}
+
+.app-shell [class*="text-green-"] {
+  color: #47745b;
+}
+
+.app-shell [class*="bg-green-"] {
+  background-color: #e8efe8;
+}
+
+.app-shell [class*="border-green-"] {
+  border-color: #cbd9cc;
+}
+
+.react-flow {
+  background: #ffffff;
+}
+
 .react-flow__renderer {
-  background-color: rgba(2, 6, 23, 0.5);
+  border: 1px solid #e4e1d9;
   border-radius: 0.75rem;
-  border: 1px solid #1e293b;
+}
+
+.react-flow__background {
+  opacity: 0.35;
 }
 
 .react-flow__handle {
   width: 10px !important;
   height: 10px !important;
-  background-color: #22d3ee !important; /* cyan-400 */
-  border: 2px solid #020617 !important;
+  background-color: #6d8b77 !important;
+  border: 2px solid #ffffff !important;
 }
 
 .react-flow__edge-path {
-  stroke-dasharray: 6;
-  animation: flow-dash 12s linear infinite;
+  stroke: #9ba69e;
 }
 
-@keyframes flow-dash {
-  from {
-    stroke-dashoffset: 240;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
+.react-flow__controls {
+  overflow: hidden;
+  border: 1px solid #e4e1d9;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(47, 51, 45, 0.08);
 }
 
-/* Custom scrollbars */
+.react-flow__controls-button {
+  background: #ffffff;
+  border-bottom-color: #e4e1d9;
+  fill: #59635e;
+}
+
+.react-flow__controls-button:hover {
+  background: #f4f3ee;
+}
+
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background-color: #020617;
+  background: #f7f6f2;
 }
+
 ::-webkit-scrollbar-thumb {
-  background-color: #1e293b;
+  background: #d3d1c9;
   border-radius: 9999px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #334155;
+  background: #b7b5ad;
+}
+
+::selection {
+  color: #292e2c;
+  background: #dce8df;
+}
+
+@media (max-width: 640px) {
+  .app-shell header .max-w-7xl {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .app-shell header .max-w-7xl > div:last-child {
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .app-shell .flex.justify-center.space-x-4 {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-inline: 0;
+  }
 }

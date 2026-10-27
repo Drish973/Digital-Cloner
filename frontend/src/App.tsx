@@ -433,7 +433,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen text-slate-100 flex flex-col font-sans">
+    <div className="app-shell min-h-screen text-slate-100 flex flex-col font-sans">
       {/* Top Header */}
       <header className="border-b border-slate-800 bg-slate-950/80 sticky top-0 z-50 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
